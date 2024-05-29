@@ -1,8 +1,25 @@
-# React + Vite
+# React + Vite User Management Application with Filtering and Authentication
+This project demonstrates a user management dashboard built with React, Vite, and Ant Design. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features 
+Filter Feature: Easily search and filter users based on role, plan, and status.
+Session Management: Securely manage user sessions using localStorage.
+Protected Routes: Restrict access to specific routes (e.g., /user-management, /add-user) to logged-in users.
+Authentication:
+Login page with username/password validation.
+Logout functionality to clear sessions.
+User Editing: Inline editing of user data with a modal for convenient updates.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Project Structure
+project-root/
+├── index.html
+├── main.jsx       
+├── package.json
+├── vite.config.js
+├── Pages/
+│   ├── LoginPage.jsx
+│   ├── UserManagementPage.jsx
+│   ├── AddUserPage.jsx   
+├── Components/
+│   ├── Header.jsx
+└── usersData.js
