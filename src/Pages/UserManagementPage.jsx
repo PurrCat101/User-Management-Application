@@ -11,31 +11,27 @@ import {
   Space,
   Popconfirm,
 } from "antd";
-import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
+import usersData from "../usersData";
 import Typography from "antd/es/typography/Typography";
+import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 
 const { Content } = Layout;
 const { Option } = Select;
 
 const UserManagementPage = () => {
-  const [users, setUsers] = useState([]);
-  const [filteredUsers, setFilteredUsers] = useState([]);
+  const [users, setUsers] = useState(usersData);
+  const [filteredUsers, setFilteredUsers] = useState(usersData);
   const [filters, setFilters] = useState({ role: "", plan: "", status: "" });
   const [pageSize, setPageSize] = useState(10);
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Get navigate function
 
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
     if (!isLoggedIn) {
-      navigate("/");
-    } else {
-      const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
-      setUsers(storedUsers);
-      setFilteredUsers(storedUsers);
+      navigate("/"); // Redirect to login if not logged in
     }
   }, [navigate]);
-
   const handleAddUser = () => {
     navigate("/add-user");
   };
@@ -76,16 +72,6 @@ const UserManagementPage = () => {
     setFilteredUsers(newUsers);
     localStorage.setItem("users", JSON.stringify(newUsers));
   };
-
-  useEffect(() => {
-    // Clear localStorage on logout
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-
-    if (!isLoggedIn) {
-      localStorage.removeItem("users");
-      navigate("/");
-    }
-  }, [navigate]);
 
   const columns = [
     {

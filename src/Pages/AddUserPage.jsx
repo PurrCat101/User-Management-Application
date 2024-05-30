@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Header from "../Components/Header.jsx";
 import { Form, Input, Radio, Select, Layout, Button, message } from "antd";
 import { useNavigate } from "react-router-dom";
@@ -62,9 +62,6 @@ function AddUserPage() {
 
   const onFinish = (values) => {
     console.log("Submitted values:", values);
-    const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
-    const updatedUsers = [...storedUsers, values];
-    localStorage.setItem("users", JSON.stringify(updatedUsers)); // Store users in localStorage
     message.success("User added successfully!"); // Show success message
     navigate("/user-management"); // Redirect to UserManagementPage
   };
