@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Header from "../Components/Header.jsx";
-import { Form, Input, Radio, Select, Layout, Button } from "antd";
+import { Form, Input, Radio, Select, Layout, Button, message } from "antd";
 import { useNavigate } from "react-router-dom";
 import { LeftOutlined } from "@ant-design/icons";
 
@@ -39,43 +39,41 @@ function AddUserPage() {
   };
 
   const navigate = useNavigate();
+
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
     if (!isLoggedIn) {
-      navigate("/"); // Redirect to login if not logged in
+      navigate("/");
     }
-  }, [navigate]); // Get the navigate function
-
-  const handleBackToHome = () => {
-    navigate("/user-management"); // Navigate to the homepage (replace '/' with your actual homepage route)
-  };
+  }, [navigate]);
 
   const [form] = Form.useForm();
 
-  // State to manage initial values and resetting
   const initialValues = {
     avatar: "",
     fullname: "",
-    gender: "male", // Default gender selection
+    gender: "male",
     email: "",
     role: "",
     plan: "",
     status: "",
   };
 
-  const [formData, setFormData] = useState(initialValues);
-
   const onFinish = (values) => {
-    // Handle form submission (e.g., send data to API)
     console.log("Submitted values:", values);
-    // After successful submission, you might want to reset the form
-    setFormData(initialValues);
-    form.resetFields();
+    const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+    const updatedUsers = [...storedUsers, values];
+    localStorage.setItem("users", JSON.stringify(updatedUsers)); // Store users in localStorage
+    message.success("User added successfully!"); // Show success message
+    navigate("/user-management"); // Redirect to UserManagementPage
+  };
+
+  const handleBackToHome = () => {
+    navigate("/user-management");
   };
 
   const handleReset = () => {
-    setFormData(initialValues);
     form.resetFields();
   };
 
@@ -83,11 +81,7 @@ function AddUserPage() {
     <Layout style={{ minHeight: "100vh", backgroundColor: "#f0f2f5" }}>
       <Header />
       <div style={{ margin: "20px", textAlign: "left" }}>
-        <Button
-          type="link" // Use link style for a cleaner look
-          icon={<LeftOutlined />} // Add the arrow icon
-          onClick={handleBackToHome}
-        >
+        <Button type="link" icon={<LeftOutlined />} onClick={handleBackToHome}>
           Back
         </Button>
       </div>
@@ -95,7 +89,7 @@ function AddUserPage() {
         <Form
           form={form}
           layout="vertical"
-          initialValues={formData}
+          initialValues={initialValues}
           onFinish={onFinish}
         >
           <Form.Item
@@ -132,7 +126,7 @@ function AddUserPage() {
             name="email"
             label="Email"
             rules={[
-              { message: "Please input the email!" },
+              { required: true, message: "Please input the email!" },
               { type: "email", message: "Please enter a valid email address!" },
             ]}
           >

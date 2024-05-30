@@ -1,29 +1,43 @@
 import { useState, useEffect } from "react";
 import Header from "../Components/Header";
 import { useNavigate } from "react-router-dom";
-import { Layout, Table, Button, Select, Tag, Avatar } from "antd";
-import usersData from "../usersData";
+import {
+  Layout,
+  Table,
+  Button,
+  Select,
+  Tag,
+  Avatar,
+  Space,
+  Popconfirm,
+} from "antd";
+import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import Typography from "antd/es/typography/Typography";
 
 const { Content } = Layout;
 const { Option } = Select;
 
 const UserManagementPage = () => {
-  const [users, setUsers] = useState(usersData);
-  const [filteredUsers, setFilteredUsers] = useState(usersData);
+  const [users, setUsers] = useState([]);
+  const [filteredUsers, setFilteredUsers] = useState([]);
   const [filters, setFilters] = useState({ role: "", plan: "", status: "" });
   const [pageSize, setPageSize] = useState(10);
-  const navigate = useNavigate(); // Get navigate function
+  const navigate = useNavigate();
 
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
     if (!isLoggedIn) {
-      navigate("/"); // Redirect to login if not logged in
+      navigate("/");
+    } else {
+      const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+      setUsers(storedUsers);
+      setFilteredUsers(storedUsers);
     }
   }, [navigate]);
+
   const handleAddUser = () => {
-    // Handle adding a new user
+    navigate("/add-user");
   };
 
   const handleSearch = () => {
@@ -50,6 +64,28 @@ const UserManagementPage = () => {
   const handlePageSizeChange = (current, size) => {
     setPageSize(size);
   };
+
+  const handleEdit = (record) => {
+    // Add your edit logic here
+    console.log("Edit", record);
+  };
+
+  const handleDelete = (record) => {
+    const newUsers = users.filter((user) => user.email !== record.email);
+    setUsers(newUsers);
+    setFilteredUsers(newUsers);
+    localStorage.setItem("users", JSON.stringify(newUsers));
+  };
+
+  useEffect(() => {
+    // Clear localStorage on logout
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (!isLoggedIn) {
+      localStorage.removeItem("users");
+      navigate("/");
+    }
+  }, [navigate]);
 
   const columns = [
     {
@@ -97,6 +133,31 @@ const UserManagementPage = () => {
           </Tag>
         );
       },
+    },
+    {
+      title: "",
+      key: "action",
+      render: (_, record) => (
+        <Space size="middle">
+          <Button
+            type="link"
+            icon={<EditOutlined />}
+            onClick={() => handleEdit(record)}
+          >
+            Edit
+          </Button>
+          <Popconfirm
+            title="Are you sure you want to delete this user?"
+            onConfirm={() => handleDelete(record)}
+            okText="Yes"
+            cancelText="No"
+          >
+            <Button type="link" icon={<DeleteOutlined />} danger>
+              Delete
+            </Button>
+          </Popconfirm>
+        </Space>
+      ),
     },
   ];
 
