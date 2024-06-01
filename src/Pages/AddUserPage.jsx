@@ -61,11 +61,18 @@ function AddUserPage() {
   };
 
   const onFinish = (values) => {
-    console.log("Submitted values:", values);
-    message.success("User added successfully!"); // Show success message
-    navigate("/user-management"); // Redirect to UserManagementPage
-  };
+    const storedUsersDataString = localStorage.getItem("users");
+    let storedUsersData = JSON.parse(storedUsersDataString) || [];
 
+    // Add the new user to the array
+    storedUsersData.push(values);
+
+    // Update localStorage
+    localStorage.setItem("users", JSON.stringify(storedUsersData));
+
+    message.success("User added successfully!");
+    navigate("/user-management");
+  };
   const handleBackToHome = () => {
     navigate("/user-management");
   };

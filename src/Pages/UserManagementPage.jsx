@@ -19,17 +19,24 @@ const { Content } = Layout;
 const { Option } = Select;
 
 const UserManagementPage = () => {
-  const [users, setUsers] = useState(usersData);
-  const [filteredUsers, setFilteredUsers] = useState(usersData);
+  const [users, setUsers] = useState(
+    () => JSON.parse(localStorage.getItem("users")) || usersData
+  );
+  const [filteredUsers, setFilteredUsers] = useState(users);
   const [filters, setFilters] = useState({ role: "", plan: "", status: "" });
   const [pageSize, setPageSize] = useState(10);
-  const navigate = useNavigate(); // Get navigate function
+  const navigate = useNavigate();
 
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
     if (!isLoggedIn) {
-      navigate("/"); // Redirect to login if not logged in
+      navigate("/");
+    }
+
+    // Store initial usersData in localStorage if it's not already there
+    if (!localStorage.getItem("users")) {
+      localStorage.setItem("users", JSON.stringify(usersData));
     }
   }, [navigate]);
   const handleAddUser = () => {

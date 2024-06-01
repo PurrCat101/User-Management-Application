@@ -1,3 +1,4 @@
+import usersData from "../usersData";
 import { Layout, Menu, Avatar, Dropdown } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
@@ -9,6 +10,10 @@ const ComponentHeader = () => {
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("username");
+
+    // Reset user data to default
+    localStorage.setItem("users", JSON.stringify(usersData));
+
     navigate("/");
   };
 
