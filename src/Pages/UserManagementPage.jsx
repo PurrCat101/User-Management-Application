@@ -69,8 +69,7 @@ const UserManagementPage = () => {
   };
 
   const handleEdit = (record) => {
-    // Add your edit logic here
-    console.log("Edit", record);
+    navigate("/edit-user", { state: { user: record } });
   };
 
   const handleDelete = (record) => {
@@ -88,9 +87,9 @@ const UserManagementPage = () => {
       render: (avatar) => <Avatar src={avatar} />,
     },
     {
-      title: "User",
-      dataIndex: "user",
-      key: "user",
+      title: "Fullname",
+      dataIndex: "fullname",
+      key: "fullname",
     },
     {
       title: "Email",

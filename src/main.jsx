@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import UserManagementPage from "./Pages/UserManagementPage.jsx";
 import AddUserPage from "./Pages/AddUserPage.jsx";
 import LoginPage from "./Pages/LoginPage.jsx";
+import EditUserPage from "./Pages/EditUserPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/add-user",
     element: <AddUserPage />,
+  },
+  {
+    path: "/edit-user",
+    element: <EditUserPage />,
   },
 ]);
 

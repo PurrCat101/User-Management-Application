@@ -1,7 +1,7 @@
 const usersData = [
   {
     key: "1",
-    user: "Galen Slixby",
+    fullname: "Galen Slixby",
     email: "gslixby0@email.com",
     role: "Editor",
     plan: "Enterprise",
@@ -10,7 +10,7 @@ const usersData = [
   },
   {
     key: "2",
-    user: "Halsey Redmore",
+    fullname: "Halsey Redmore",
     email: "hredmore1@email.com",
     role: "Author",
     plan: "Team",
@@ -19,7 +19,7 @@ const usersData = [
   },
   {
     key: "3",
-    user: "Marjory Sicely",
+    fullname: "Marjory Sicely",
     email: "msicely2@email.com",
     role: "Maintainer",
     plan: "Enterprise",
@@ -28,7 +28,7 @@ const usersData = [
   },
   {
     key: "4",
-    user: "Cyrill Risby",
+    fullname: "Cyrill Risby",
     email: "crisby3@email.com",
     role: "Maintainer",
     plan: "Team",
@@ -37,7 +37,7 @@ const usersData = [
   },
   {
     key: "5",
-    user: "Maggy Hurran",
+    fullname: "Maggy Hurran",
     email: "mhurran4@email.com",
     role: "Subscriber",
     plan: "Enterprise",
@@ -46,7 +46,7 @@ const usersData = [
   },
   {
     key: "6",
-    user: "Silvan Halstead",
+    fullname: "Silvan Halstead",
     email: "shalstead5@email.com",
     role: "Author",
     plan: "Company",
@@ -55,7 +55,7 @@ const usersData = [
   },
   {
     key: "7",
-    user: "Breena Gallemore",
+    fullname: "Breena Gallemore",
     email: "bgallemore6@email.com",
     role: "Subscriber",
     plan: "Company",
@@ -64,7 +64,7 @@ const usersData = [
   },
   {
     key: "8",
-    user: "Kathryne Liger",
+    fullname: "Kathryne Liger",
     email: "kliger7@email.com",
     role: "Author",
     plan: "Enterprise",
@@ -73,7 +73,7 @@ const usersData = [
   },
   {
     key: "9",
-    user: "Franz Scotfurth",
+    fullname: "Franz Scotfurth",
     email: "fscotfurth8@email.com",
     role: "Subscriber",
     plan: "Team",
@@ -82,7 +82,7 @@ const usersData = [
   },
   {
     key: "10",
-    user: "Jillene Bellany",
+    fullname: "Jillene Bellany",
     email: "jbellany9@email.com",
     role: "Maintainer",
     plan: "Company",
@@ -92,7 +92,7 @@ const usersData = [
   // Add 10 more users here
   {
     key: "11",
-    user: "User Eleven",
+    fullname: "User Eleven",
     email: "user11@email.com",
     role: "Subscriber",
     plan: "Enterprise",
@@ -101,7 +101,7 @@ const usersData = [
   },
   {
     key: "12",
-    user: "User Twelve",
+    fullname: "User Twelve",
     email: "user12@email.com",
     role: "Editor",
     plan: "Team",
@@ -110,7 +110,7 @@ const usersData = [
   },
   {
     key: "13",
-    user: "User Thirteen",
+    fullname: "User Thirteen",
     email: "user13@email.com",
     role: "Author",
     plan: "Company",
@@ -119,7 +119,7 @@ const usersData = [
   },
   {
     key: "14",
-    user: "User Fourteen",
+    fullname: "User Fourteen",
     email: "user14@email.com",
     role: "Maintainer",
     plan: "Enterprise",
@@ -128,7 +128,7 @@ const usersData = [
   },
   {
     key: "15",
-    user: "User Fifteen",
+    fullname: "User Fifteen",
     email: "user15@email.com",
     role: "Subscriber",
     plan: "Team",
@@ -137,7 +137,7 @@ const usersData = [
   },
   {
     key: "16",
-    user: "User Sixteen",
+    fullname: "User Sixteen",
     email: "user16@email.com",
     role: "Editor",
     plan: "Company",
@@ -146,7 +146,7 @@ const usersData = [
   },
   {
     key: "17",
-    user: "User Seventeen",
+    fullname: "User Seventeen",
     email: "user17@email.com",
     role: "Author",
     plan: "Enterprise",
@@ -155,7 +155,7 @@ const usersData = [
   },
   {
     key: "18",
-    user: "User Eighteen",
+    fullname: "User Eighteen",
     email: "user18@email.com",
     role: "Maintainer",
     plan: "Team",
@@ -164,7 +164,7 @@ const usersData = [
   },
   {
     key: "19",
-    user: "User Nineteen",
+    fullname: "User Nineteen",
     email: "user19@email.com",
     role: "Subscriber",
     plan: "Company",
@@ -173,7 +173,7 @@ const usersData = [
   },
   {
     key: "20",
-    user: "User Twenty",
+    fullname: "User Twenty",
     email: "user20@email.com",
     role: "Editor",
     plan: "Enterprise",
