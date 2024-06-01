@@ -10,7 +10,7 @@ This project demonstrates a user management dashboard built with React, Vite, an
 - **Authentication**:
   - Login page with username/password validation.
   - Logout functionality to clear sessions.
-- **User Editing**: Inline editing of user data with a modal for convenient updates. (Upcomming)
+- **User Editing**: Inline editing of user data with a modal for convenient updates.
 - **User Delete**: Allow deletion of user.
 - **Add user**: Allow to add new users to the system.
 
@@ -25,6 +25,7 @@ project-root/
 │   ├── LoginPage.jsx
 │   ├── UserManagementPage.jsx
 │   ├── AddUserPage.jsx   
+│   ├── EditUserPage.jsx   
 ├── Components/
 │   ├── Header.jsx
 └── usersData.js
