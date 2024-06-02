@@ -30,10 +30,10 @@ project-root/
 │   ├── Header.jsx
 └── usersData.js
 ```
+
 ### How to use
 - **Clone the Repository**
-```git clone https://github.com/your-username/user-management-system.git
-cd user-management-system```
+```git clone https://github.com/PurrCat101/User-Management-Application.git```
 - **Install Dependencies**
 ``` npm install ```
 - **Run the Application**
