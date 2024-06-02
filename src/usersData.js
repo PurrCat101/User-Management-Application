@@ -7,6 +7,7 @@ const usersData = [
     plan: "Enterprise",
     status: "Inactive",
     avatar: "https://randomuser.me/api/portraits/men/1.jpg",
+    gender: "male",
   },
   {
     key: "2",
@@ -16,6 +17,7 @@ const usersData = [
     plan: "Team",
     status: "Pending",
     avatar: "https://randomuser.me/api/portraits/men/2.jpg",
+    gender: "male",
   },
   {
     key: "3",
@@ -25,6 +27,7 @@ const usersData = [
     plan: "Enterprise",
     status: "Active",
     avatar: "https://randomuser.me/api/portraits/women/3.jpg",
+    gender: "female",
   },
   {
     key: "4",
@@ -34,6 +37,7 @@ const usersData = [
     plan: "Team",
     status: "Inactive",
     avatar: "https://randomuser.me/api/portraits/men/4.jpg",
+    gender: "male",
   },
   {
     key: "5",
@@ -43,6 +47,7 @@ const usersData = [
     plan: "Enterprise",
     status: "Pending",
     avatar: "https://randomuser.me/api/portraits/women/5.jpg",
+    gender: "female",
   },
   {
     key: "6",
@@ -52,6 +57,7 @@ const usersData = [
     plan: "Company",
     status: "Active",
     avatar: "https://randomuser.me/api/portraits/men/6.jpg",
+    gender: "male",
   },
   {
     key: "7",
@@ -61,6 +67,7 @@ const usersData = [
     plan: "Company",
     status: "Pending",
     avatar: "https://randomuser.me/api/portraits/women/7.jpg",
+    gender: "female",
   },
   {
     key: "8",
@@ -70,6 +77,7 @@ const usersData = [
     plan: "Enterprise",
     status: "Pending",
     avatar: "https://randomuser.me/api/portraits/women/8.jpg",
+    gender: "female",
   },
   {
     key: "9",
@@ -79,6 +87,7 @@ const usersData = [
     plan: "Team",
     status: "Pending",
     avatar: "https://randomuser.me/api/portraits/men/9.jpg",
+    gender: "male",
   },
   {
     key: "10",
@@ -88,8 +97,8 @@ const usersData = [
     plan: "Company",
     status: "Inactive",
     avatar: "https://randomuser.me/api/portraits/women/10.jpg",
+    gender: "female",
   },
-  // Add 10 more users here
   {
     key: "11",
     fullname: "User Eleven",
@@ -98,6 +107,7 @@ const usersData = [
     plan: "Enterprise",
     status: "Active",
     avatar: "https://randomuser.me/api/portraits/men/11.jpg",
+    gender: "male",
   },
   {
     key: "12",
@@ -107,6 +117,7 @@ const usersData = [
     plan: "Team",
     status: "Pending",
     avatar: "https://randomuser.me/api/portraits/women/12.jpg",
+    gender: "female",
   },
   {
     key: "13",
@@ -116,6 +127,7 @@ const usersData = [
     plan: "Company",
     status: "Inactive",
     avatar: "https://randomuser.me/api/portraits/men/13.jpg",
+    gender: "male",
   },
   {
     key: "14",
@@ -125,6 +137,7 @@ const usersData = [
     plan: "Enterprise",
     status: "Active",
     avatar: "https://randomuser.me/api/portraits/women/14.jpg",
+    gender: "female",
   },
   {
     key: "15",
@@ -134,6 +147,7 @@ const usersData = [
     plan: "Team",
     status: "Pending",
     avatar: "https://randomuser.me/api/portraits/men/15.jpg",
+    gender: "male",
   },
   {
     key: "16",
@@ -143,6 +157,7 @@ const usersData = [
     plan: "Company",
     status: "Inactive",
     avatar: "https://randomuser.me/api/portraits/women/16.jpg",
+    gender: "female",
   },
   {
     key: "17",
@@ -152,6 +167,7 @@ const usersData = [
     plan: "Enterprise",
     status: "Active",
     avatar: "https://randomuser.me/api/portraits/men/17.jpg",
+    gender: "male",
   },
   {
     key: "18",
@@ -161,6 +177,7 @@ const usersData = [
     plan: "Team",
     status: "Pending",
     avatar: "https://randomuser.me/api/portraits/women/18.jpg",
+    gender: "female",
   },
   {
     key: "19",
@@ -170,6 +187,7 @@ const usersData = [
     plan: "Company",
     status: "Inactive",
     avatar: "https://randomuser.me/api/portraits/men/19.jpg",
+    gender: "male",
   },
   {
     key: "20",
@@ -179,6 +197,7 @@ const usersData = [
     plan: "Enterprise",
     status: "Active",
     avatar: "https://randomuser.me/api/portraits/women/20.jpg",
+    gender: "female",
   },
 ];
 

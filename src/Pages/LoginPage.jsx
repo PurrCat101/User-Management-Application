@@ -12,7 +12,7 @@ const LoginPage = () => {
 
   const handleLogin = () => {
     // Check username and password
-    if (username === "user" && password === "Password!1234") {
+    if (username === "user" && password === "1234") {
       // Successful login
       message.success("Logged in successfully!");
       navigate("/user-management");

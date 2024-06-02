@@ -113,12 +113,10 @@ function EditUserPage() {
             label="Gender"
             rules={[{ required: true, message: "Please select gender!" }]}
           >
-            <div style={radioGroupStyle}>
-              <Radio.Group>
-                <Radio value="male">Male</Radio>
-                <Radio value="female">Female</Radio>
-              </Radio.Group>
-            </div>
+            <Radio.Group style={radioGroupStyle}>
+              <Radio value="male">Male</Radio>
+              <Radio value="female">Female</Radio>
+            </Radio.Group>
           </Form.Item>
           <Form.Item
             style={formItemStyle}

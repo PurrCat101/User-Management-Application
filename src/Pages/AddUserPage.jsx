@@ -53,7 +53,7 @@ function AddUserPage() {
   const initialValues = {
     avatar: "",
     fullname: "",
-    gender: "male",
+    gender: "",
     email: "",
     role: "",
     plan: "",
