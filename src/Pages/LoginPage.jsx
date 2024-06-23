@@ -99,6 +99,9 @@ const LoginPage = () => {
               <Button type="primary" htmlType="submit">
                 Login
               </Button>
+              <Typography style={{ marginTop: 10 }}>
+                not a member? <a href="/register">Sign up</a> now
+              </Typography>
             </Form.Item>
           </Form>
         </div>

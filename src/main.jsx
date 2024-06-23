@@ -5,6 +5,7 @@ import UserManagementPage from "./Pages/UserManagementPage.jsx";
 import AddUserPage from "./Pages/AddUserPage.jsx";
 import LoginPage from "./Pages/LoginPage.jsx";
 import EditUserPage from "./Pages/EditUserPage.jsx";
+import RegisterPage from "./Pages/RegisterPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/edit-user",
     element: <EditUserPage />,
+  },
+  {
+    path: "/register",
+    element: <RegisterPage />,
   },
 ]);
 
