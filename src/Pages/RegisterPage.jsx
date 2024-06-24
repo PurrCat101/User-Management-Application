@@ -19,8 +19,8 @@ const RegisterForm = () => {
   };
 
   const formContainerStyle = {
-    maxWidth: "500px",
-    margin: "50px 750px",
+    maxWidth: "350px",
+    margin: "50px auto",
     padding: "20px",
     background: "#fff",
     borderRadius: "8px",
@@ -58,9 +58,7 @@ const RegisterForm = () => {
     <div style={formContainerStyle}>
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
+          textAlign: "center",
           marginBottom: "20px",
         }}
       >
@@ -137,7 +135,7 @@ const RegisterForm = () => {
           </Select>
         </Form.Item>
 
-        <Form.Item style={{ display: "flex", justifyContent: "center" }}>
+        <Form.Item style={{ textAlign: "center" }}>
           <Button
             type="primary"
             htmlType="submit"

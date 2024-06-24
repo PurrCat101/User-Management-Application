@@ -8,8 +8,9 @@ const { Option } = Select;
 
 function EditUserPage() {
   const formContainerStyle = {
-    maxWidth: "500px",
-    margin: "50px 750px",
+    width: "100%",
+    maxWidth: "350px",
+    margin: "50px auto",
     padding: "20px",
     background: "#fff",
     borderRadius: "8px",
